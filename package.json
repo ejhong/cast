@@ -1,0 +1,13 @@
+{
+  "name": "cast-a-stone-making-atlas",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "test:browser": "node checks/browser.mjs",
+    "previews": "node checks/browser.mjs --previews"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "number": "01",
+  "place": "Pumapunku · Bolivia",
+  "title": "Precision, held in a mold.",
+  "shortTitle": "The H-block",
+  "subtitle": "One carefully made form. A shape that can be repeated.",
+  "summary": "Watch a multipart mold separate from a stepped H-block. The proposed trick is to make the difficult geometry in the form, while the stone is still workable.",
+  "tags": ["Precision", "Repeated shapes"],
+  "initial": 0.88,
+  "duration": 26,
+  "sceneDescription": "A gray H-shaped stone with stepped recesses, surrounded by an exploded timber mold and removable inserts.",
+  "modelNote": "An invented mold around a simplified H-block. This is a geometric study, not a measured reconstruction of a particular artifact.",
+  "control": {"label": "Show the mold", "key": "mold", "checked": true},
+  "steps": [
+    {"name": "Assemble", "title": "Put the precision in the form.", "text": "Timber sides and removable inserts define the outside edges and recessed faces. Making an accurate, reusable form is the first engineering challenge."},
+    {"name": "Pack", "title": "Work the material into every corner.", "text": "A hypothetical mineral mixture fills the spaces around the inserts. The animation prescribes the fill; it does not calculate flow or trapped air."},
+    {"name": "Set", "title": "Let the shape become self-supporting.", "text": "The material must develop enough strength to survive release. Shrinkage, surface finish, and recipe are questions for a physical trial."},
+    {"name": "Release", "title": "Take the mold apart, piece by piece.", "text": "Side panels move outward and the recessed inserts withdraw from the face. A workable mold needs a release path for every piece."},
+    {"name": "Inspect", "title": "Read the finished surface.", "text": "The mold transfers its geometry to the block. Look for repeatable imperfections, seams, and surface texture that could distinguish a cast surface from a worked one."}
+  ],
+  "issues": [
+    {"title": "Sharp internal corners", "mechanism": "An insert can form a recess while the material is soft, reducing the amount of hard-stone removal needed afterward.", "remaining": "The insert itself still needs accurate manufacture and a practical release direction."},
+    {"title": "Repeated geometry", "mechanism": "Reusing a mold could reproduce both the intended shape and small accidental details.", "remaining": "Similar shapes alone do not show mold reuse. Surveyed dimensions and repeated defects would be more informative."}
+  ],
+  "hypothesis": "Davidovits and colleagues propose an artificial origin for sampled Pumapunku andesite. This study explores one possible molding arrangement; their materials claim does not establish this particular mold.",
+  "alternative": "Skilled stoneworking with templates, pecking, grinding, and abrasion can also produce regular geometry. The relevant comparison is the actual surface and internal structure of the stone.",
+  "test": "Make several blocks from the same multipart mold. Measure dimensional variation, release damage, seams, and repeated surface defects; compare them with documented H-blocks.",
+  "sources": ["davidovits-andesite", "vranich", "aletheia"],
+  "relatedTopics": ["T-077", "T-080"]
+}

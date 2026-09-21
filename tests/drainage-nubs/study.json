@@ -1,0 +1,30 @@
+{
+  "number": "04",
+  "place": "A detail across sites",
+  "title": "A small bulge. A possible clue.",
+  "shortTitle": "The drainage nub",
+  "subtitle": "A close-up of what might happen behind a wooden face.",
+  "summary": "Open a low drain in a cloth-lined mold. Water escapes, the fabric bows outward, and the retained material leaves a protrusion when it hardens.",
+  "tags": ["Nubs", "Cloth impressions"],
+  "initial": 0.61,
+  "duration": 24,
+  "sceneDescription": "A cutaway timber mold holding granular stone mixture. Cloth bulges through a low opening while blue water droplets drain into a small pool.",
+  "modelNote": "A qualitative cutaway of a proposed mechanism. Drainage and bulging are animated, not predictions from a fluid or fabric simulation.",
+  "control": {"label": "Open the drain", "key": "drain", "checked": true},
+  "steps": [
+    {"name": "Fill", "title": "Hold the wet mixture in a lined form.", "text": "A cloth lining separates the illustrated mineral mixture from the timber facing. The front is cut away so the proposed mechanism can be seen."},
+    {"name": "Open", "title": "Give excess water an outlet.", "text": "A low opening exposes the cloth. Toggle the drain to compare the pictured sequence with a closed form."},
+    {"name": "Drain", "title": "Water passes. Solids stay behind.", "text": "The illustration assumes a permeable fabric that retains the particles. Pressure bows it into the opening and carries some mixture outward."},
+    {"name": "Harden", "title": "The bulge becomes part of the block.", "text": "If the material hardens while the cloth remains bowed, the protrusion can survive removal of the mold."},
+    {"name": "Reveal", "title": "A construction detail leaves a trace.", "text": "A nub remains in the open-drain scenario. The closed-drain view is a geometric comparison; it does not assert how either real mixture would cure."}
+  ],
+  "issues": [
+    {"title": "Protrusions left on a finished face", "mechanism": "A cloth-covered outlet offers a way for a nub to form as part of the block, without carving the whole face back around it.", "remaining": "This still needs a physical replication that matches the shape, texture, and internal continuity of a particular ancient nub."},
+    {"title": "Why only some blocks?", "mechanism": "A selective-drain scenario would add an outlet only where the mix needed drainage.", "remaining": "Selective drainage is an extension explored here, not a demonstrated historical practice or a claim that all casting recipes need drains."}
+  ],
+  "hypothesis": "Fóti proposes a fabric-drainage origin for some stone protrusions. This study isolates the geometry and adds a selectable drain; it does not assume that every nub has the same origin.",
+  "alternative": "Bosses left during dressing, handling features, and unfinished surfaces offer other explanations. Their relevance depends on the individual stone and construction context.",
+  "test": "Cast matched specimens with a closed form, an open hole, and a cloth-covered hole. Record water loss, fabric deflection, curing, and nub shape. Compare internal structure and surface weave with documented examples.",
+  "sources": ["foti", "aletheia"],
+  "relatedTopics": ["T-066", "T-067", "T-088"]
+}

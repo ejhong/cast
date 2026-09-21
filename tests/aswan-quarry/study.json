@@ -1,0 +1,31 @@
+{
+  "number": "05",
+  "place": "Aswan · Egypt",
+  "title": "Read the quarry as a process.",
+  "shortTitle": "Fire, stone & scoop marks",
+  "subtitle": "Heat. React. Cool. Remove. Repeat.",
+  "summary": "Explore Fóti’s proposed natron treatment: a heated surface reaction, removal of the cooled layer with a pounder, and a separate settling stage.",
+  "tags": ["Scoop marks", "Pounding", "Quarry pits"],
+  "initial": 0.3,
+  "duration": 30,
+  "sceneDescription": "A granite quarry surface with repeated scoops, an orange heated treatment patch, a dark pounding stone, and a cutaway settling vessel.",
+  "modelNote": "A proposed cycle, not a chemical or thermal simulation. Color is explanatory; removal rate, temperatures, and pit dimensions are not inferred.",
+  "control": {"label": "Show proposed treatment", "key": "treatment", "checked": true},
+  "steps": [
+    {"name": "Treat", "title": "Apply material to the rock surface.", "text": "Fóti proposes a natron-based treatment of granite. The highlighted patch identifies the proposed reaction zone; it is not a reconstructed ancient apparatus."},
+    {"name": "Heat", "title": "Sustain a surface reaction.", "text": "In the proposal, strong heating enables a silicate-forming reaction. Achievable heat, fuel use, reaction depth, and residues are experimental questions."},
+    {"name": "Cool", "title": "Let the reaction layer cool.", "text": "The colored layer becomes pale to represent a cooled product. This step matters: the proposal is not a pounder striking a pool of molten material."},
+    {"name": "Remove", "title": "Use the pounder on the altered layer.", "text": "The dark stone breaks away the illustrated surface product. Turning treatment off shows the intact-surface comparison, without inventing a removal-rate advantage."},
+    {"name": "Settle", "title": "Separate a useful liquid fraction.", "text": "The cutaway vessel illustrates Fóti’s proposed settling step. Identifying Aswan shafts as such vessels would need independent residue and context evidence."}
+  ],
+  "issues": [
+    {"title": "Repeated scoop-shaped depressions", "mechanism": "Repeated treatment and removal of bounded patches could produce a family of depressions.", "remaining": "Their form and residues must be compared with pounding, thermal damage, and other quarrying processes."},
+    {"title": "Slow removal by pounding alone", "mechanism": "A surface treatment could change what the pounder has to remove. It offers a specific comparison experiment.", "remaining": "The Marčiš study measured mechanical pounding. Its results do not establish chemical treatment or supply its removal rate."},
+    {"title": "Deep pits beside the work", "mechanism": "Fóti interprets some shafts as settling spaces for a silicate-bearing liquid.", "remaining": "The shape of a pit alone cannot establish its use; field context and residues are needed."}
+  ],
+  "hypothesis": "Fóti connects the proposed process with a reinterpretation of a workshop scene in Rekhmire’s tomb. The usual reading is metalworking; the image does not by itself identify a natron-on-granite process.",
+  "alternative": "Mechanical quarrying with pounders, potentially alongside other treatments, remains the comparison. Experiments need matched stone and a complete accounting of heating and preparation time.",
+  "test": "Compare untreated pounding, heating alone, and the proposed chemical treatment. Measure volume removed per total labor-hour, fuel, residues, and surface shape. Keep cooling and preparation time in the calculation.",
+  "sources": ["foti", "marcis", "rekhmire", "engelbach", "aletheia"],
+  "relatedTopics": ["T-003", "T-009", "T-034", "T-035", "T-036", "T-037"]
+}

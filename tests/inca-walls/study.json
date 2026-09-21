@@ -1,0 +1,30 @@
+{
+  "number": "02",
+  "place": "Cusco · Peru",
+  "title": "A wall that makes its own joints.",
+  "shortTitle": "The yielding wall",
+  "subtitle": "What if the neighboring stones were part of the mold?",
+  "summary": "A workable mass settles between irregular neighbors. Timber and cloth support the exposed face as the new block takes the shape of its surroundings.",
+  "tags": ["Tight joints", "Irregular shapes"],
+  "initial": 0.9,
+  "duration": 25,
+  "sceneDescription": "A polygonal wall with one warm-colored block deforming into the space between its neighbors, behind a removable cloth and timber support.",
+  "modelNote": "The fit is prescribed by geometry. This animation does not simulate putty mechanics, prove a recipe, or reproduce a surveyed Cusco wall.",
+  "control": {"label": "Show cloth & supports", "key": "mold", "checked": true},
+  "steps": [
+    {"name": "Support", "title": "Give the face something to rest against.", "text": "A timber frame and a cloth facing hold the proposed workable material at the front. Existing stones define the other boundaries."},
+    {"name": "Place", "title": "Bring in a yielding mass.", "text": "This scenario starts with a thick, putty-like mixture. Its behavior would differ from a freely poured liquid or a rigid H-block mold."},
+    {"name": "Press", "title": "Let the neighbors define the joint.", "text": "The illustrated mass deforms into the irregular gap. A very close fit follows from using the adjacent surfaces as boundaries."},
+    {"name": "Set", "title": "Keep the shape as it hardens.", "text": "The critical material question is whether a real mixture can set with sufficiently little shrinkage, slump, or adhesion to its neighbors."},
+    {"name": "Uncover", "title": "Remove the support. Keep the fit.", "text": "The facing moves away to reveal the joint. A physical trial could also test whether cloth weave or support pressure leaves recognizable marks."}
+  ],
+  "issues": [
+    {"title": "Close-fitting, irregular joints", "mechanism": "A workable block can take an impression of neighboring surfaces instead of being repeatedly lifted for fitting.", "remaining": "Shrinkage and release still matter. Separate, tight-fitting blocks must remain separate after curing."},
+    {"title": "Putting a block into a confined gap", "mechanism": "Material can arrive in small batches and acquire its final shape inside the wall.", "remaining": "This changes the size of each load, not the total mass to deliver or the need for access and support."}
+  ],
+  "hypothesis": "This is a candidate construction sequence inspired by the broader cast-stone proposal. The cloth arrangement and deformation are illustrative design choices, not recovered Inca equipment.",
+  "alternative": "Careful dressing, trial fitting, and abrasion provide a conventional account of polygonal masonry. A close joint by itself does not discriminate between these processes.",
+  "test": "Build a small wall using a specified putty-like mixture. Measure slump, joint gaps before and after curing, bonding between blocks, and marks from the facing. Compare against a dressed-stone control.",
+  "sources": ["foti", "protzen", "aletheia"],
+  "relatedTopics": ["T-028", "T-029", "T-031"]
+}

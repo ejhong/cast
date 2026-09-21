@@ -1,0 +1,31 @@
+{
+  "number": "03",
+  "place": "Giza · Egypt",
+  "title": "Small loads. A monumental block.",
+  "shortTitle": "The block made in place",
+  "subtitle": "Carry the ingredients. Form the block where it will stay.",
+  "summary": "Follow the idea behind Davidovits’ limestone demonstrations: prepare a workable mixture, carry it in portions, pack a timber form, and let it harden.",
+  "tags": ["Heavy transport", "Narrow access"],
+  "initial": 0.87,
+  "duration": 28,
+  "sceneDescription": "A pale limestone block cast inside a wooden form on a masonry course, with a mixing basin, a moving basket, and a narrow approach.",
+  "modelNote": "A simplified sequence inspired by modern re-agglomerated limestone demonstrations. Timing, dimensions, and handling are illustrative.",
+  "control": {"label": "Show the formwork", "key": "mold", "checked": true},
+  "steps": [
+    {"name": "Prepare", "title": "Start with the right raw material.", "text": "Davidovits’ demonstrations use disaggregated limestone and a binder mixture. Choosing suitable material is part of the proposal, not an incidental detail."},
+    {"name": "Carry", "title": "Move portions through the available space.", "text": "A basket can pass through a route too narrow for the finished block. The same total mass still has to arrive, along with any water and binder."},
+    {"name": "Pack", "title": "Build up the block inside its form.", "text": "The mixture is placed and compacted. This scene emphasizes packing a workable mix rather than treating it as a freely flowing modern concrete."},
+    {"name": "Cure", "title": "Allow time for a load-bearing stone.", "text": "The block remains supported while it develops strength. Real curing times, water demand, and construction throughput require measurements."},
+    {"name": "Strip", "title": "Take away the boards.", "text": "The finished block is already on its course. Casting in place could reduce the final heavy-lifting operation, while leaving an ingredient-supply problem to solve."}
+  ],
+  "issues": [
+    {"title": "Moving a very large stone", "mechanism": "Breaking delivery into small loads avoids transporting the completed block as one object.", "remaining": "Casting does not remove mass, lifting work, mixing labor, or the need to obtain suitable ingredients."},
+    {"title": "A distant quarry", "mechanism": "If suitable local inputs exist, a cast block could use them. If its aggregate comes from a distant quarry, that material still needs transport.", "remaining": "A quarry match and a transport distance must be evaluated for the particular block; distance alone is not evidence of casting."},
+    {"title": "A finished object wider than its entrance", "mechanism": "Formwork and small loads could enter separately and be assembled inside.", "remaining": "The object's date, installation sequence, chemistry, and available workspace must support that scenario."}
+  ],
+  "hypothesis": "Joseph Davidovits proposes that some Egyptian blocks were made from re-agglomerated limestone. Modern demonstrations establish a stone-making possibility; identifying ancient examples is a separate materials question.",
+  "alternative": "Quarried masonry, transported with organized labor and lifting systems, is the conventional account. Petrographic comparisons have also challenged the casting interpretation.",
+  "test": "Track the complete work needed for a specified block: sourcing, ingredient transport, water, mixing, mold reuse, curing, and strength. Compare both the logistics and the microstructure with the relevant quarried stone.",
+  "sources": ["davidovits-formula", "davidovits-video", "jana", "aletheia"],
+  "relatedTopics": ["T-019", "T-072", "T-087"]
+}
