@@ -1,6 +1,6 @@
 # CAST — a stone-making atlas
 
-A visual companion to [Aletheia’s Cast, Not Carved case](https://ejhong.github.io/aletheia/cases/megalithic-casting/). The front page connects the casting idea to specific construction problems. Five process studies illustrate rigid molds, yielding wall material, re-agglomerated limestone, fabric drainage, and a proposed quarry-treatment cycle.
+A visual companion to [Aletheia’s Cast, Not Carved case](https://ejhong.github.io/aletheia/cases/megalithic-casting/), published at **https://ejhong.github.io/cast/**. The front page connects the casting idea to specific construction problems. Eight process studies illustrate rigid molds, yielding wall material, re-agglomerated limestone, fabric drainage, quarry treatment, rope impressions, mold seams, and a large vessel made inside a chamber.
 
 These are **conceptual reconstructions**, not archaeological scans or validated physical simulations. A useful animation makes a mechanism understandable; it does not establish historical use. Each study includes competing explanations, sources, and a proposed physical test.
 
@@ -56,7 +56,9 @@ npm run test:browser
 
 The browser check requires Google Chrome at its default macOS path, or `CAST_CHROME` pointing to a Chromium executable. It uses the running dev server at `CAST_SITE_URL` (default http://127.0.0.1:4193/). Screenshots go to a temporary directory unless `CAST_SCREENSHOTS` is set. To rebuild committed illustration PNGs, run `npm run previews` with the server running.
 
-The browser checks exercise the timeline, stage selection, playback, options, keyboard camera controls, load arithmetic, mobile layout, reduced-motion default, and fallback without WebGL or scripts. They also check hosting below `/cast/`.
+The browser checks exercise the timeline, stage selection, playback, options, alternative construction sequences, keyboard camera controls, load arithmetic, mobile layout, reduced-motion default, and fallback without WebGL or scripts. They also check hosting below `/cast/`. Render selected new previews with `npm run previews -- --studies=rope-impressions,mold-seams,narrow-doorway`.
+
+The chamber study compares casting from baskets with moving a finished vessel and installing it before roofing. A separate source panel gives Petrie's reported Khafre measurements; the animated chamber is deliberately schematic and does not use those dimensions.
 
 ## Source and asset notes
 

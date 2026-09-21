@@ -1,0 +1,63 @@
+{
+  "number": "08",
+  "place": "The chamber · a question of sequence",
+  "title": "Small loads in. A large vessel inside.",
+  "shortTitle": "Through the narrow doorway",
+  "subtitle": "The entrance is only part of the story. When was it closed?",
+  "summary": "Carry material through a small doorway, then form a hollow vessel inside. Compare that proposal with moving a finished object and placing it before the room is roofed.",
+  "tags": ["Narrow access", "Large stone vessels", "Construction sequence"],
+  "initial": 0.99,
+  "duration": 32,
+  "sceneDescription": "A cutaway stone chamber with a narrow entrance, small baskets of material, and a large hollow vessel taking shape between an outer form and an inner wooden core.",
+  "modelNote": "An invented chamber and vessel, not a reconstruction of Khafre's burial chamber or the Serapeum. The obstruction is deliberately easy to see. Roof and side walls are cut away; handling, batch count, chemistry, and timing are schematic. Khafre's actual reported widths appear below.",
+  "control": {"label": "Show the chamber walls", "key": "walls", "checked": true, "offText": "Walls hidden to reveal the vessel, core, and delivery path. This is a cutaway view, not a change to the chosen construction sequence."},
+  "scenarios": [
+    {"id": "cast", "label": "Cast inside", "description": "A proposed route: small loads and separate mold panels enter an already enclosed room. The large object takes shape inside."},
+    {"id": "finished", "label": "Move it whole", "description": "The finished vessel approaches the completed entrance. In this schematic geometry it cannot pass; this is not a clearance calculation for an ancient passage.", "steps": [
+      {"name": "Make", "title": "Begin with the finished vessel.", "text": "The large object starts outside the chamber. Quarrying and hollowing it are not animated in this access comparison."},
+      {"name": "Approach", "title": "Bring the object toward the entrance.", "text": "The vessel moves on a schematic sledge. Its mass, hauling force, and the real route would need separate engineering work."},
+      {"name": "Meet", "title": "The opening becomes the constraint.", "text": "This invented vessel is too large for this doorway. For an actual artifact, measure the complete passage, bends, gradients, turning space, and possible orientations."},
+      {"name": "Check", "title": "Check the history of the entrance.", "text": "Today's opening may not be the opening available during construction. An unfinished roof or wall can change the delivery route completely."},
+      {"name": "Compare", "title": "Try an earlier installation.", "text": "Choose “Before roofing” to see the same vessel placed through the open top. A narrow final entrance does not by itself establish a cast origin."}
+    ]},
+    {"id": "before", "label": "Before roofing", "description": "An alternative sequence: place the finished vessel while access from above is available, then roof the chamber. Petrie proposed this timing for Khafre's coffer.", "steps": [
+      {"name": "Open", "title": "The chamber is still open above.", "text": "The final doorway is narrow, but the roof has not been built. An earlier construction stage can provide a different route for the finished object."},
+      {"name": "Place", "title": "Use the access that exists then.", "text": "The vessel is lowered into the unroofed chamber. The lines indicate a load being supported; they do not specify an ancient lifting rig."},
+      {"name": "Settle", "title": "Put the vessel in its final position.", "text": "The object reaches the chamber floor. Its manufacture and heavy handling still need an explanation, but the later doorway need not be its delivery route."},
+      {"name": "Roof", "title": "Build the enclosure afterward.", "text": "Roof elements close over the chamber. Most of the roof remains cut away in this view so that the vessel stays visible."},
+      {"name": "Revisit", "title": "Now the entrance looks too small.", "text": "The completed room contains an object that did not come through its final doorway. This is the sequence Petrie inferred for Khafre's coffer; our architecture and lifting motion are illustrative."}
+    ]}
+  ],
+  "steps": [
+    {"name": "Assemble", "title": "Bring the mold in as small pieces.", "text": "Separate boards pass through the entrance and become an outer form and an inner core. The core reserves the hollow interior; it also needs a workable removal sequence."},
+    {"name": "Carry", "title": "The load fits the available opening.", "text": "Baskets deliver portions of a stiff, workable mixture. This handling is inspired by Davidovits' limestone proposal, extended here to an invented vessel."},
+    {"name": "Pack", "title": "Build the base and walls around a core.", "text": "Material accumulates between the outer boards and the inner core. Packing reaches the narrow wall spaces. Batch bonding, air pockets, and the stiffness of the forms matter."},
+    {"name": "Cure", "title": "Let a single body develop strength.", "text": "The supported vessel hardens in place. A real process needs a suitable mixture, curing conditions, and enough working time to join the batches without weak interfaces."},
+    {"name": "Release", "title": "Take the mold apart inside.", "text": "The outer boards withdraw and the inner panels separate. A large hollow vessel remains in the chamber. The animation demonstrates a proposed sequence, not a recipe for the granite of an ancient coffer."}
+  ],
+  "caseStudy": {
+    "eyebrow": "A DOCUMENTED EXAMPLE / KHAFRE'S COFFER",
+    "title": "A small difference. A big question about timing.",
+    "intro": "In his 1883 survey of the Second Pyramid at Giza, Petrie compared the coffer's width with the narrower entrance passages. These are his reported dimensions, not the dimensions of the model above.",
+    "metrics": [
+      {"label": "Coffer width, rounded by Petrie", "value": "42.0 in", "detail": "about 1.067 m"},
+      {"label": "Upper passage width, rounded", "value": "41.3 in", "detail": "about 1.049 m"},
+      {"label": "Difference between those widths", "value": "0.7 in", "detail": "about 18 mm · not a huge mismatch"}
+    ],
+    "paragraphs": [
+      "Petrie concluded that the coffer had been placed before the chamber roof was laid. In the same description he recorded saw-related features and drilled holes. His account treats the coffer as worked stone, not as a cast object.",
+      "This makes Khafre a useful construction-sequence comparison. A width comparison alone is not a complete route analysis: passage height, turns, possible rotation, and access during building also matter. A casting proposal would additionally need evidence from the coffer's material and manufacture."
+    ],
+    "source": "petrie-khafre"
+  },
+  "issues": [
+    {"title": "A large object in a confined room", "mechanism": "Small containers and mold panels could pass through an opening much smaller than the finished object, allowing it to be formed inside.", "remaining": "The proposed mixture must make the actual stone. A limestone demonstration does not establish a casting process for granite."},
+    {"title": "The work of hollowing a vessel", "mechanism": "An inner core reserves the empty volume while the surrounding body is formed, so that volume does not have to be removed afterward.", "remaining": "The core needs bracing, access for packing, and a way out. Wall thickness, batch interfaces, leakage, and curing are practical constraints."},
+    {"title": "An entrance smaller than the object", "mechanism": "Casting after enclosure is one possible sequence. Installing a finished object before enclosure is another, illustrated in the comparison above.", "remaining": "Establish the original route and the order of construction for the specific chamber. A present-day bottleneck cannot supply that chronology."}
+  ],
+  "hypothesis": "The atlas extends the small-load idea into a hypothetical chamber: build a removable form inside and pack material around a core. Baskets suit the illustrated stiff mixture better than depicting a large stream of watery concrete. The container material and exact mix remain reconstruction choices.",
+  "alternative": "Petrie's explanation for Khafre's coffer was earlier installation, before roofing. Other large underground objects require their own measured routes and installation evidence. The Serapeum is not treated here as an established case of an object that could not have entered.",
+  "test": "First reconstruct the actual chamber's construction sequence and all route clearances. Then compare a full-scale casting trial with the feasible finished-object route, accounting for every load, water, form panels, labor, curing time, and lifting operation. Compare the resulting material with the specific ancient object.",
+  "sources": ["petrie-khafre", "davidovits-baskets", "davidovits-formula", "aletheia"],
+  "relatedTopics": []
+}

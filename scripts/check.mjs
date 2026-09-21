@@ -13,6 +13,11 @@ for(const id of ids){
   for(const key of ['title','shortTitle','summary','sceneDescription','modelNote','hypothesis','alternative','test'])assert.ok(s[key]?.trim(),`${id}: missing ${key}`);
   assert.equal(s.steps.length,5,`${id}: five timeline stages required`);assert.ok(s.initial>=0&&s.initial<=1);assert.ok(s.duration>0);
   for(const source of s.sources)assert.ok(sources[source],`${id}: unknown source ${source}`);
+  if(s.caseStudy)assert.ok(sources[s.caseStudy.source],`${id}: unknown case source`);
+  if(s.scenarios){
+    assert.equal(new Set(s.scenarios.map(v=>v.id)).size,s.scenarios.length,`${id}: duplicate scenarios`);
+    for(const scenario of s.scenarios){assert.ok(scenario.id&&scenario.label&&scenario.description);if(scenario.steps)assert.equal(scenario.steps.length,5);}
+  }
   for(const file of ['scene.js','index.html'])await stat(resolve(dir,file));
   assert.ok((await stat(resolve(root,'assets/previews',`${id}.png`))).size>10000,`${id}: missing or empty poster`);
   pages.push(`tests/${id}/index.html`);

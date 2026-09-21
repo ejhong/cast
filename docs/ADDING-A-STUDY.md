@@ -28,3 +28,11 @@ Distinguish three things in the copy:
 For cloth and putty, geometry morphing is useful illustration; it is not a material simulation. For chemistry, use qualitative sequence labels until actual trial data support rates, temperatures, or strength. Add no private research sources or copyrighted book images to this public-ready repository.
 
 Generate a poster with `npm run previews` after the build. This provides a durable card image and a readable fallback when WebGL or JavaScript is unavailable. Test at desktop and mobile widths, then review screenshots. Browser-rendered model illustrations should be labeled as reconstructions, never archival images.
+
+Optional comparison fields:
+
+- `control.offText`: prose appended when the study's checkbox is off. Set `checked` explicitly; it initializes both the checkbox and the scene option.
+- `scenarios`: an array of `{id, label, description, steps?}`. The first scenario uses the base steps unless it supplies its own five stages. The chosen id arrives at the scene as `options.sequence`. Selecting a scenario preserves the timeline position; Play then restarts that sequence. All transform and visibility state must reset when switching scenarios.
+- `caseStudy`: `{eyebrow, title, intro, metrics, paragraphs, source}`. Each metric has `{label, value, detail}` and `source` names a public reference. Use this to keep actual archaeological measurements distinct from an illustrative scene.
+
+Render only a new study's poster with `npm run previews -- --studies=your-slug`. The full browser checks cover all registered studies and every alternative scenario.

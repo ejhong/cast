@@ -1,0 +1,31 @@
+{
+  "number": "06",
+  "place": "The surface · a contact experiment",
+  "title": "A rope remembers its twist.",
+  "shortTitle": "The rope impression",
+  "subtitle": "Press. Set. Lift. Read what stays behind.",
+  "summary": "A twisted rope touches workable material. Its strands leave a different surface from a smooth cord: a repeating pattern inside the groove.",
+  "tags": ["Rope-like marks", "Surface detail"],
+  "initial": 0.9,
+  "duration": 24,
+  "sceneDescription": "A three-strand rope lifted above a pale stone specimen, revealing a curved groove with repeated strand impressions.",
+  "modelNote": "An invented contact experiment, not a reconstruction of an identified ancient mark. The surface approximates the negative of the modeled strands, with slightly smoothed edges; depth and timing are illustrative. It does not simulate material flow or rope deformation.",
+  "control": {"label": "Use a twisted rope", "key": "twisted", "checked": true, "offText": "Smooth-cord comparison: the broad groove remains, but the repeating strand impressions disappear."},
+  "steps": [
+    {"name": "Prepare", "title": "A surface that can still yield.", "text": "Begin with a workable specimen and a rope laid above it. The curved route is chosen for this experiment; it is not a tracing of an archaeological feature."},
+    {"name": "Press", "title": "Each strand makes contact.", "text": "The rope sinks partway into the surface. A twisted rope has alternating low points, so contact can leave more information than the outline of a single groove."},
+    {"name": "Hold", "title": "Let the contact shape persist.", "text": "For a sharp impression to survive, the material must retain detail as it sets. A real trial would vary consistency, pressure, fiber type, and the time before removal."},
+    {"name": "Lift", "title": "Take the rope away.", "text": "The rope lifts from the specimen. The negative of its lower strands remains in the model. Sticking, smearing, and damage on release would have to be measured in a physical trial."},
+    {"name": "Read", "title": "Look inside the groove.", "text": "Compare the twisted rope with the smooth cord. Repeated oblique impressions could be more informative than a rope-like curve alone. Their origin and age would still need investigation."}
+  ],
+  "issues": [
+    {"title": "A curved mark in hard stone", "mechanism": "Contact before hardening can transfer a curved shape without carving that curve into already hard material.", "remaining": "Later rope abrasion, tool marks, weathering, and impressions in a younger coating can also produce surface features."},
+    {"title": "Fine detail inside a groove", "mechanism": "A yielding surface could copy the rope's strand spacing and direction of twist.", "remaining": "A candidate needs a measured surface profile and a documented archaeological context. This scene supplies neither an ancient example nor its date."},
+    {"title": "Separating shape from process", "mechanism": "Changing only the rope makes a simple comparison: a broad channel versus a channel with strand detail.", "remaining": "Replicas and alternative processes must be compared under the same imaging conditions before a mark can diagnose its cause."}
+  ],
+  "hypothesis": "This atlas proposes a contact experiment: a rope could impress material that was workable at the time of contact. That could be a cast body, a surface layer, or a later repair; the impression alone does not distinguish them.",
+  "alternative": "Compare an impression with a rope dragged across hard stone, deliberate tool grooves, and natural surface damage. A resemblance in a photograph is a starting point for measurement.",
+  "test": "Press both smooth cord and twisted rope into a candidate mixture. Record pressure and release time; scan the cured surfaces. Compare them with abrasion controls and a measured ancient feature, including the direction and spacing of any strand detail.",
+  "sources": ["davidovits-formula", "aletheia"],
+  "relatedTopics": []
+}

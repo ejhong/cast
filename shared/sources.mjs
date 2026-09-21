@@ -1,4 +1,16 @@
 export const sources = {
+  'petrie-khafre': {
+    title: 'The Pyramids and Temples of Gizeh · Khafre’s coffer',
+    author: 'W. M. Flinders Petrie · 1883 · chapter IX, §§73, 76–77, pp. 104, 106–108',
+    url: 'https://petrieproject.com/book/the-pyramids-and-temples-of-gizeh',
+    note: 'Primary survey. Reports the coffer and passage dimensions, saw-related features, drilled holes, and an installation before roofing. The book concerns the Second Pyramid here, not Khufu’s coffer.'
+  },
+  'davidovits-baskets': {
+    title: 'Why the Pharaohs Built the Pyramids with Fake Stones · chapter 1',
+    author: 'Joseph Davidovits · Geopolymer Institute · public press-kit excerpt',
+    url: 'https://www.geopolymer.org/wp-content/uploads/pyramid_chapt1.pdf',
+    note: 'The proponent’s account explicitly describes transporting workable limestone material in baskets and compacting it in forms. It is a proposed historical process, not documentation of ancient casting.'
+  },
   'davidovits-andesite': {
     title: 'Organic matter in Pumapunku andesite',
     author: 'J. Davidovits, L. Huaman & R. Davidovits · 2019',

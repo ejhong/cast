@@ -9,6 +9,8 @@ const root=fileURLToPath(new URL('../',import.meta.url));
 const ids=JSON.parse(await readFile(resolve(root,'tests/index.json'),'utf8'));
 const base=new URL(process.env.CAST_SITE_URL||'http://127.0.0.1:4193/');
 const previews=process.argv.includes('--previews');
+const selected=process.argv.find(arg=>arg.startsWith('--studies='))?.slice(10).split(',')||ids;
+for(const id of selected)assert.ok(ids.includes(id),`Unknown study ${id}`);
 const work=await mkdtemp(join(tmpdir(),'cast-browser-'));
 const screenshots=process.env.CAST_SCREENSHOTS||join(work,'screenshots');await mkdir(screenshots,{recursive:true});
 const browser=spawn(process.env.CAST_CHROME||'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',[
@@ -50,7 +52,7 @@ try {
   async function imagesLoaded(){assert.ok(await client.evaluate(`Promise.all([...document.images].map(i=>{i.loading='eager';return i.decode().then(()=>i.naturalWidth>0).catch(()=>false)})).then(v=>v.every(Boolean))`),'An image did not load');}
 
   if(previews){
-    for(const id of ids){
+    for(const id of selected){
       await navigate(`tests/${id}/`,1200,900);
       assert.equal(await client.evaluate('document.body.dataset.webgl'),'ready',`No WebGL for ${id}`);
       await client.evaluate(`{
@@ -60,7 +62,7 @@ try {
       await wait(250);const data=await client.evaluate('document.getElementById("scene").toDataURL("image/png").split(",")[1]');
       await writeFile(resolve(root,'assets/previews',`${id}.png`),Buffer.from(data,'base64'));console.log(`Rendered ${id}`);
     }
-    console.log(`${ids.length} model illustrations saved in assets/previews/.`);
+    console.log(`${selected.length} model illustrations saved in assets/previews/.`);
   }else{
     await navigate('index.html');await imagesLoaded();
     assert.equal(await client.evaluate('document.querySelectorAll(".study-card").length'),ids.length);
@@ -85,6 +87,23 @@ try {
       assert.notEqual(early,first,`${id} should visibly change when scrubbed`);
       await input('timeline',650);const before=await client.evaluate('document.getElementById("scene").toDataURL()');await click('#scene-option');
       const after=await client.evaluate('document.getElementById("scene").toDataURL()');assert.notEqual(before,after,`${id} option must affect the model`);await click('#scene-option');
+      const scenarios=await client.evaluate('window.castStudy.study.scenarios||[]');
+      if(scenarios.length){
+        let previous=await client.evaluate('document.getElementById("scene").toDataURL()');
+        for(const scenario of scenarios.slice(1)){
+          await click(`[data-scenario="${scenario.id}"]`);
+          assert.equal(await client.evaluate('document.body.dataset.sequence'),scenario.id);
+          assert.equal(await client.evaluate('document.getElementById("scenario-description").textContent'),scenario.description);
+          const frame=await client.evaluate('document.getElementById("scene").toDataURL()');assert.notEqual(frame,previous,'Sequence comparison must change the scene');previous=frame;
+          for(let i=0;i<5;i++){
+            await click(`[data-step="${i}"]`);
+            assert.equal(await client.evaluate('document.getElementById("step-title").textContent'),scenario.steps[i].title);
+            assert.equal(await client.evaluate(`document.querySelector('[data-step="${i}"] .step-name').textContent`),scenario.steps[i].name);
+          }
+          await input('timeline',650);await screenshot(`${id}-${scenario.id}.png`);
+        }
+        await click(`[data-scenario="${scenarios[0].id}"]`);
+      }
       await input('timeline',345);assert.equal(await client.evaluate('window.castStudy.progress'),.345);
       await click('#play');await wait(600);assert.ok(await client.evaluate('window.castStudy.progress>.345'),`${id} animation must advance`);await click('#play');
       const paused=await client.evaluate('window.castStudy.progress');await wait(200);assert.equal(await client.evaluate('window.castStudy.progress'),paused);

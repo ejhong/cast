@@ -1,0 +1,31 @@
+{
+  "number": "07",
+  "place": "The form · a joint between boards",
+  "title": "The mold leaves a signature.",
+  "shortTitle": "The seam in the stone",
+  "subtitle": "A gap in the boards can become a raised line.",
+  "summary": "Watch material enter a narrow joint in a wooden form. When the boards part, a small fin remains on the stone, along with the suggestion of wood grain.",
+  "tags": ["Mold seams", "Board impressions"],
+  "initial": 0.91,
+  "duration": 25,
+  "sceneDescription": "Two wooden mold boards drawn apart to expose a pale cast specimen with a narrow raised seam and subtle vertical board grain.",
+  "modelNote": "A conceptual specimen with an exaggerated seam for visibility. The amount of leakage is prescribed, not calculated from a tested mixture. The timber texture is procedural; it is not copied from an ancient surface.",
+  "control": {"label": "Leave a gap between the boards", "key": "gap", "checked": true, "offText": "Tight-joint comparison: the boards meet and the modeled fin disappears. Surface grain can still transfer."},
+  "steps": [
+    {"name": "Join", "title": "Two boards make one face.", "text": "The form is assembled from separate pieces. Here a small gap is left between two front boards. Switch it off to compare a close-fitting joint."},
+    {"name": "Pack", "title": "Material reaches the joint.", "text": "As the form fills, workable material can enter the opening. Whether a real mix leaks, bridges the gap, or carries only fine paste through it depends on its consistency and particle sizes."},
+    {"name": "Set", "title": "The gap becomes a thin projection.", "text": "The material in the joint hardens with the body. The boards' inward-facing grain can also leave shallow relief in the surface that touches them."},
+    {"name": "Release", "title": "Withdraw the boards.", "text": "The front boards move away and separate. Their joint is revealed as a positive feature: a fin sticking out from the stone face."},
+    {"name": "Inspect", "title": "Read the positive and the negative.", "text": "A void in the form can leave a raised feature; a ridge on the form can leave a groove. That distinction helps turn a visual resemblance into a testable account of how a surface formed."}
+  ],
+  "issues": [
+    {"title": "A raised line across a face", "mechanism": "A narrow opening between mold boards gives material somewhere to protrude, creating a fin when it hardens.", "remaining": "A surviving ridge can also come from unfinished dressing, a mineral vein, repair material, or differential weathering."},
+    {"title": "Board-like surface detail", "mechanism": "A form can transfer shallow texture during contact, so a single operation could produce both the face and its fine detail.", "remaining": "The grain direction and relief need close documentation. A younger render or repair could carry a mold impression too."},
+    {"title": "Similar marks on several blocks", "mechanism": "Reusing the same form could repeat a distinctive joint or defect on more than one cast surface.", "remaining": "A useful match needs dimensions and the same irregular details, rather than several roughly straight lines."}
+  ],
+  "hypothesis": "This scene isolates one proposed consequence of timber formwork. A seam and its adjacent texture might record contact with a mold, but this invented specimen makes no claim about the origin of a particular ancient block.",
+  "alternative": "Compare formwork traces with stone-dressing marks, natural bands, weathering, and repair seams. Establish that the feature belongs to the original stone surface before interpreting it as evidence of manufacture.",
+  "test": "Cast matched specimens against tight and deliberately open board joints. Record mix consistency, gap size, curing, and release. Scan the resulting fins and grain, then compare a documented candidate using the same surface measurements.",
+  "sources": ["davidovits-formula", "protzen", "aletheia"],
+  "relatedTopics": ["T-029", "T-088"]
+}
