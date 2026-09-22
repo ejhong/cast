@@ -9,13 +9,22 @@ const studies = await Promise.all(ids.map(async id => ({id, ...JSON.parse(await 
 const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]));
 const arrow = '<span aria-hidden="true">↗</span>';
 const logo = '<svg viewBox="0 0 32 36" aria-hidden="true"><path d="m16 2 13 7v17l-13 8L3 26V9Z M3 9l13 8 13-8 M16 17v17 M9 6l14 8v8l-7 4"/></svg>';
-const pageHead = (title, description, base, module) => `<!doctype html>
+const siteUrl = 'https://ejhong.github.io/cast/';
+const pageHead = (title, description, base, module, study = null) => {
+  const url = new URL(study ? `tests/${study.id}/` : '', siteUrl).href;
+  const preview = study || studies[0];
+  const image = new URL(`assets/previews/${preview.id}.png`, siteUrl).href;
+  return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)} — CAST</title><meta name="description" content="${esc(description)}"><meta name="theme-color" content="#eeeae1">
 <meta property="og:title" content="${esc(title)} — CAST"><meta property="og:description" content="${esc(description)}"><meta property="og:type" content="website">
+<meta property="og:site_name" content="CAST — A stone-making atlas"><meta property="og:url" content="${esc(url)}"><link rel="canonical" href="${esc(url)}">
+<meta property="og:image" content="${esc(image)}"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="900"><meta property="og:image:alt" content="${esc(preview.sceneDescription)}">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(title)} — CAST"><meta name="twitter:description" content="${esc(description)}"><meta name="twitter:image" content="${esc(image)}"><meta name="twitter:image:alt" content="${esc(preview.sceneDescription)}">
 <link rel="icon" href="${base}assets/icon.svg" type="image/svg+xml"><link rel="preload" href="${base}assets/fonts/newsreader-regular.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="${base}style.css"><script type="importmap">{"imports":{"three":"${base || './'}assets/vendor/three.module.min.js"}}</script>
 <script type="module" src="${base}shared/${module}.js"></script></head>`;
+};
 const header = base => `<a class="skip" href="#main">Skip to content</a><header class="site-header wrap"><a class="brand" href="${base}index.html">${logo}<span>CAST<span class="brand-sub">A STONE-MAKING ATLAS</span></span></a><nav aria-label="Main navigation"><a href="${base}index.html#idea">The idea</a><a href="${base}index.html#studies">The studies <span class="nav-count">${String(studies.length).padStart(2,'0')}</span></a><a href="${base}index.html#questions">The possibilities</a><a class="research-nav" href="${sources.aletheia.url}">The research ${arrow}</a></nav></header>`;
 const footer = base => `<footer class="site-footer wrap"><a class="brand" href="${base}index.html">${logo}<span>CAST</span></a><p>A visual inquiry into how stone might be made.</p><div><a href="${base}index.html#about">About the atlas</a><a href="${sources.aletheia.url}">Explore the evidence ${arrow}</a></div></footer>`;
 const sourceList = keys => `<ol class="source-list">${keys.map(key => {const s = sources[key]; if (!s) throw new Error('Unknown source: '+key); return `<li><a href="${esc(s.url)}">${esc(s.title)} ${arrow}</a><span>${esc(s.author)}</span><p>${esc(s.note)}</p></li>`;}).join('')}</ol>`;
@@ -67,7 +76,7 @@ await writeFile(resolve(root, 'index.html'), home);
 
 for (let i=0; i<studies.length; i++) {
   const s=studies[i], next=studies[(i+1)%studies.length], base='../../';
-  const html=`${pageHead(s.title, s.summary, base, 'player')}
+  const html=`${pageHead(s.title, s.summary, base, 'player', s)}
 <body class="study-page" data-study="${s.id}">${header(base)}<main id="main" class="wrap">
 <a class="back-link" href="${base}index.html#studies">← Back to the atlas</a>
 <section class="study-intro"><div><p class="eyebrow">STUDY ${s.number} / ${esc(s.place)}</p><h1>${esc(s.title)}</h1></div><div><p class="study-subtitle">${esc(s.subtitle)}</p><div class="tags">${s.tags.map(t=>`<span>${esc(t)}</span>`).join('')}</div></div></section>
