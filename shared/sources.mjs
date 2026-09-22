@@ -1,4 +1,16 @@
 export const sources = {
+  'khafre-valley-photo': {
+    title: 'Corner blocks in Khafre’s Valley Temple',
+    author: 'HoremWeb · site photograph · Wikimedia Commons',
+    url: 'https://commons.wikimedia.org/wiki/File:Khafre_valley_corner.jpg',
+    note: 'Photographic reference for the corner masonry. It documents the visible feature, not a casting process. Reproduced unchanged under CC BY-SA 4.0 with attribution.'
+  },
+  'khafre-valley-temple': {
+    title: 'Pyramid Complex of Khafre (Khefren)',
+    author: 'Egyptian Ministry of Tourism and Antiquities',
+    url: 'https://egymonuments.gov.eg/monuments/pyramid-complex-of-khafre-khefren/',
+    note: 'Official site description: the Valley Temple has a limestone core encased in granite. A reference for the monument and its materials, not support for the proposed hide mold.'
+  },
   'petrie-khafre': {
     title: 'The Pyramids and Temples of Gizeh · Khafre’s coffer',
     author: 'W. M. Flinders Petrie · 1883 · chapter IX, §§73, 76–77, pp. 104, 106–108',

@@ -18,6 +18,7 @@ The front page is a narrative and an atlas. Each independent study has an observ
 | Rope impressions | A three-strand rope lifts from its geometric negative | Strand detail inside a curved groove | A controlled contact trial and a measured ancient candidate |
 | Mold seams | Boards separate to reveal a raised fin | Joint and board-grain impressions | Measured specimens against alternative surface processes |
 | Narrow doorway | Baskets enter; a hollow vessel forms around an inner core | A large object in a confined chamber | An actual route survey and material-specific trial |
+| Bent corners | A hide turns around a post; the form releases an L-shaped block | A single stone continuing around a corner | A braced hide-mold trial and a measured temple block |
 
 The first version deliberately uses prescribed geometry and animation. Do not call it a physics simulation. Parameters should be added when they produce an informative comparison, with their assumptions visible.
 

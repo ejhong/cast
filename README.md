@@ -1,6 +1,6 @@
 # CAST — a stone-making atlas
 
-A visual companion to [Aletheia’s Cast, Not Carved case](https://ejhong.github.io/aletheia/cases/megalithic-casting/), published at **https://ejhong.github.io/cast/**. The front page connects the casting idea to specific construction problems. Eight process studies illustrate rigid molds, yielding wall material, re-agglomerated limestone, fabric drainage, quarry treatment, rope impressions, mold seams, and a large vessel made inside a chamber.
+A visual companion to [Aletheia’s Cast, Not Carved case](https://ejhong.github.io/aletheia/cases/megalithic-casting/), published at **https://ejhong.github.io/cast/**. The front page connects the casting idea to specific construction problems. Nine process studies illustrate rigid molds, yielding wall material, re-agglomerated limestone, fabric drainage, quarry treatment, rope impressions, mold seams, a large vessel made inside a chamber, and a corner block formed in a hide-and-post mold.
 
 These are **conceptual reconstructions**, not archaeological scans or validated physical simulations. A useful animation makes a mechanism understandable; it does not establish historical use. Each study includes competing explanations, sources, and a proposed physical test.
 
@@ -60,10 +60,12 @@ The browser checks exercise the timeline, stage selection, playback, options, al
 
 The chamber study compares casting from baskets with moving a finished vessel and installing it before roofing. A separate source panel gives Petrie's reported Khafre measurements; the animated chamber is deliberately schematic and does not use those dimensions.
 
+The bent-corners study adapts Marcell Fóti’s six-slide *Bent corners* construction sketch into a freestanding L-shaped mold. Pole A reserves the inside corner; the hide sheets and posts withdraw into open space. Height, dimensions, additional supports, filling, and release are reconstruction choices. The original presentation is not distributed. A separately credited photograph of Khafre’s Valley Temple provides the architectural comparison.
+
 ## Source and asset notes
 
 The nearby `geo` and `aletheia-lab` repositories were consulted as research references. Their copyrighted books, confidential papers, and private notes are not included here. Primary public references are linked on each page. The original demonstrations are linked, not embedded or republished.
 
-All scene geometry and procedural textures are original schematic illustrations. H-block and wall geometry are not measurement data. No chemical rates, curing times, or material strength are calculated. The load calculator only divides a hypothetical finished mass by the chosen load size.
+All scene geometry and procedural textures are original schematic illustrations. H-block, wall, and corner-block geometry are not measurement data. No chemical rates, curing times, or material strength are calculated. The load calculator only divides a hypothetical finished mass by the chosen load size. The site photograph has its own attribution and license in [assets/references/README.md](assets/references/README.md).
 
 Three.js 0.180.0 is vendored under its MIT license in `assets/vendor/`. Newsreader and IBM Plex Mono are distributed with their font licenses in `assets/fonts/`.

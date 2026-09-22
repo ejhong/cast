@@ -1,0 +1,53 @@
+{
+  "number": "09",
+  "place": "Valley Temple · Giza",
+  "title": "A corner, held in a hide.",
+  "shortTitle": "The bent corner",
+  "subtitle": "Turn the mold around a post. Let the stone take its shape.",
+  "summary": "Wrap animal hides around timber posts, fill an L-shaped cavity, and release one continuous corner block. Explore the method in Marcell Fóti’s Bent corners sketches.",
+  "tags": ["Corner blocks", "Animal-hide molds"],
+  "initial": 0.93,
+  "duration": 30,
+  "sceneDescription": "One continuous L-shaped stone block, with leather-colored mold sheets folding down from its faces after the timber posts lift clear of the corner.",
+  "modelNote": "Adapted from Marcell Fóti’s six-slide Bent corners presentation. The drawings are interpreted as views from above; height, proportions, extra supports, filling, and release are reconstruction choices. This is an invented specimen, not a measured Valley Temple block or a simulation of hide strength, slurry flow, or stone chemistry.",
+  "control": {"label": "Show hides & posts", "key": "mold", "checked": true, "offText": "Formwork hidden: inspect the planned footprint and the continuous L-shaped body as it fills."},
+  "steps": [
+    {"name": "Stake", "title": "A post reserves the inside corner.", "text": "Set timber posts around the planned footprint. Pole A sits in the recess of the L, outside the space that will become stone. The outline on the ground is a drawing guide."},
+    {"name": "Wrap", "title": "The hide turns around Pole A.", "text": "Stretch and fasten the sheets between the supports. The inner sheet follows two faces of Pole A, making a right-angle return. Separate outer sheets close the cavity. The small pegs stand for the fastening points in Fóti’s sketch."},
+    {"name": "Fill", "title": "One cavity. Two connected arms.", "text": "A workable mineral mixture fills both arms of the L. The open top lets us see the continuous body taking shape. Actual hides and fastenings would need to resist the load, retain the mixture, and keep the intended corner."},
+    {"name": "Set", "title": "Keep the corner supported.", "text": "The material is shown changing from a wet mixture to a stone-like body while the form stays in place. The color change marks a proposed setting stage; a real recipe, curing time, shrinkage, and strength remain to be established."},
+    {"name": "Reveal", "title": "Release the form. Keep the turn.", "text": "Release the fastenings and lift the posts clear, including Pole A in the open recess. Then peel the hides down and away from the faces. One continuous L-shaped block remains: its corner comes from the shape of the cavity while the material was workable."}
+  ],
+  "caseStudy": {
+    "eyebrow": "THE ARCHITECTURAL QUESTION / KHAFRE’S VALLEY TEMPLE",
+    "title": "A block that turns the corner.",
+    "intro": "The corner masonry at Khafre’s Valley Temple gives this study its question: could a flexible form make a block that continues around a right angle?",
+    "image": {
+      "src": "assets/references/khafre-valley-corner.jpg",
+      "width": 1200,
+      "height": 1600,
+      "alt": "A photograph looking up an inside corner of Khafre’s Valley Temple, showing the stone faces and joints continuing around the angle.",
+      "caption": "Corner masonry at Khafre’s Valley Temple. Site photograph; the animated specimen is schematic.",
+      "credit": "HoremWeb",
+      "creditUrl": "https://commons.wikimedia.org/wiki/File:Khafre_valley_corner.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    "paragraphs": [
+      "Egypt’s Ministry of Tourism and Antiquities describes the temple as a limestone structure encased in granite. A successful mold demonstration would still need a material that explains the actual granite; making the outline alone would not establish that connection.",
+      "Fóti’s sketches supply the proposed construction detail. Slides 5–6 show hide sheets enclosing slurry beside a recessed post. The animation develops that geometry into a freestanding specimen, with the supports and removal paths visible."
+    ],
+    "source": "khafre-valley-photo",
+    "linkLabel": "View the source photograph"
+  },
+  "issues": [
+    {"title": "A single block around a corner", "mechanism": "A continuous L-shaped cavity gives workable material both arms of the block at once. The inside angle is established by the supported hide.", "remaining": "An L-shaped outline can also be made by dressing a quarried stone. Shape alone does not identify the manufacturing process."},
+    {"title": "A flexible form with a sharp turn", "mechanism": "Wrapping a sheet around a square post gives the flexible material a defined corner and a place to fasten its ends.", "remaining": "Hide stretch, seams, leakage, post bracing, and pressure on the longer spans need physical trials. The drawn sharp angle is a target, not a strength prediction."},
+    {"title": "Getting the form out afterward", "mechanism": "The posts lift clear before the hides peel away from exposed faces. The corner post occupies an open recess, so its removal path passes beside the block.", "remaining": "Adhesion, shrinkage around the post, release damage, and access in an actual wall could change the sequence. This specimen stands alone so those paths are visible."}
+  ],
+  "hypothesis": "Marcell Fóti’s Bent corners presentation proposes containing a slurry with animal hides fastened around posts. This study interprets the corner arrangement in his final two slides as an L-shaped mold. Filling, hardening, and removal extend those static sketches into a possible sequence; they are not documented ancient operations.",
+  "alternative": "Compare the proposal with shaping a quarried granite block to fit a corner, including dressing after placement. Survey the actual block and its joints, and compare tool traces, surface texture, mineral structure, and possible form-contact marks. A corner photograph alone cannot distinguish these processes.",
+  "test": "Build a small hide-and-post corner mold and document the mixture, sheet thickness, fastenings, and bracing. Measure deflection during filling, leakage, corner angle, shrinkage, and release damage. Compare the cured specimen with a dressed-stone control and a measured temple block, including their surface traces and internal mineral structure.",
+  "sources": ["khafre-valley-photo", "khafre-valley-temple", "foti", "aletheia"],
+  "relatedTopics": []
+}

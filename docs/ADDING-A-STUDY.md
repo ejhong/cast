@@ -34,5 +34,6 @@ Optional comparison fields:
 - `control.offText`: prose appended when the study's checkbox is off. Set `checked` explicitly; it initializes both the checkbox and the scene option.
 - `scenarios`: an array of `{id, label, description, steps?}`. The first scenario uses the base steps unless it supplies its own five stages. The chosen id arrives at the scene as `options.sequence`. Selecting a scenario preserves the timeline position; Play then restarts that sequence. All transform and visibility state must reset when switching scenarios.
 - `caseStudy`: `{eyebrow, title, intro, metrics, paragraphs, source}`. Each metric has `{label, value, detail}` and `source` names a public reference. Use this to keep actual archaeological measurements distinct from an illustrative scene.
+  `metrics` may be omitted for a photographic comparison. Optional `image` fields are `{src, width, height, alt, caption, credit, creditUrl, license, licenseUrl}`, with `src` relative to the site root. Credit and license appear below the image; keep a matching asset note in `assets/references/`. `linkLabel` can replace the default survey-link text.
 
 Render only a new study's poster with `npm run previews -- --studies=your-slug`. The full browser checks cover all registered studies and every alternative scenario.

@@ -87,6 +87,49 @@ try {
       assert.notEqual(early,first,`${id} should visibly change when scrubbed`);
       await input('timeline',650);const before=await client.evaluate('document.getElementById("scene").toDataURL()');await click('#scene-option');
       const after=await client.evaluate('document.getElementById("scene").toDataURL()');assert.notEqual(before,after,`${id} option must affect the model`);await click('#scene-option');
+      if(id==='bent-corners'){
+        assert.equal(await client.evaluate('document.getElementById("scene").toDataURL()'),before,'Restoring the formwork must restore the same frame');
+        for(const [name,progress] of [['stake',110],['wrap',340],['fill',500],['set',740],['release-posts',835],['reveal',930],['finished',1000]]){
+          await input('timeline',progress);await screenshot(`bent-corners-${name}.png`);
+        }
+        await input('timeline',10);await input('timeline',650);
+        assert.equal(await client.evaluate('document.getElementById("scene").toDataURL()'),before,'Scrubbing backward must restore hides, posts, fill, and color');
+        const geometryCheck=await client.evaluate(`(async()=>{
+          const {THREE}=await import('../../shared/geometry.js');
+          const stage=window.castStudy.stage,root=stage.scene.getObjectByName('bent-corners'),stone=root.getObjectByName('corner-block');
+          const hides=root.children.filter(o=>o.name.includes('hide'));
+          const posts=root.children.filter(o=>o.name==='pole-a'||o.name.startsWith('outer-post-'));
+          const ray=new THREE.Raycaster(),down=new THREE.Vector3(0,-1,0),point=new THREE.Vector3();
+          stage.setProgress(.74);
+          const hits=[[1,-.4],[-1.1,1],[.4,.8]].map(([x,z])=>{
+            ray.set(new THREE.Vector3(x,3,z),down);return ray.intersectObject(stone).length>0;
+          });
+          const conflicts=[];
+          // Sample the release paths against the actual cast mesh and post bounds.
+          for(let frame=0;frame<=20;frame++){
+            const p=.8+frame/100;stage.setProgress(p);
+            const bounds=posts.filter(post=>post.visible).map(post=>new THREE.Box3().setFromObject(post.children[0]).expandByScalar(-.004));
+            for(const hide of hides){
+              const vertices=hide.geometry.attributes.position;
+              for(let i=0;i<vertices.count;i+=7){
+                point.fromBufferAttribute(vertices,i).applyMatrix4(hide.matrixWorld);
+                if(bounds.some(b=>b.containsPoint(point)))conflicts.push('Hide crosses a post at '+p);
+                if(point.y>-.12){
+                  ray.set(new THREE.Vector3(point.x,3,point.z),down);
+                  const hit=ray.intersectObject(stone)[0];
+                  if(hit&&point.y<hit.point.y-.012)conflicts.push('Hide crosses the block at '+p);
+                }
+                if(conflicts.length>5)break;
+              }
+              if(conflicts.length>5)break;
+            }
+            if(conflicts.length>5)break;
+          }
+          stage.setProgress(.65);return {hits,conflicts};
+        })()`);
+        assert.deepEqual(geometryCheck.hits,[true,true,false],'Both arms must be filled while the inner corner stays open');
+        assert.deepEqual(geometryCheck.conflicts,[],'The formwork needs a clear removal path');
+      }
       const scenarios=await client.evaluate('window.castStudy.study.scenarios||[]');
       if(scenarios.length){
         let previous=await client.evaluate('document.getElementById("scene").toDataURL()');
@@ -115,8 +158,10 @@ try {
       console.log(`Verified ${id}: stages, scrub, option, playback, camera, mobile.`);
     }
     // Verify static hosting from a repository subdirectory.
-    await navigate('/cast/tests/drainage-nubs/',1000,850);await imagesLoaded();
-    assert.equal(await client.evaluate('document.body.dataset.webgl'),'ready');
+    for(const id of ['drainage-nubs','bent-corners']){
+      await navigate(`/cast/tests/${id}/`,1000,850);await imagesLoaded();
+      assert.equal(await client.evaluate('document.body.dataset.webgl'),'ready');
+    }
     // Returning from another chapter must leave the retained WebGL player usable.
     await navigate('tests/pumapunku/');await input('timeline',600);
     await navigate('tests/inca-walls/');
@@ -126,15 +171,20 @@ try {
     assert.ok(await client.evaluate('window.castStudy.progress>.42'),'Player must survive browser Back');await click('#play');
     // No-WebGL fallback must show the persisted illustration, with the prose intact.
     const {identifier}=await client.send('Page.addScriptToEvaluateOnNewDocument',{source:`const context=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(type,...args){return type==='webgl'||type==='webgl2'?null:context.call(this,type,...args)}`});
-    await navigate('tests/drainage-nubs/',390,844);await imagesLoaded();
-    assert.equal(await client.evaluate('document.body.dataset.webgl'),'unavailable');
-    assert.equal(await client.evaluate('document.querySelector(".scene-fallback").hidden'),false);
-    await screenshot('fallback-mobile.png');await client.send('Page.removeScriptToEvaluateOnNewDocument',{identifier});
+    for(const id of ['drainage-nubs','bent-corners']){
+      await navigate(`tests/${id}/`,390,844);await imagesLoaded();
+      assert.equal(await client.evaluate('document.body.dataset.webgl'),'unavailable');
+      assert.equal(await client.evaluate('document.querySelector(".scene-fallback").hidden'),false);
+      await screenshot(`${id}-fallback-mobile.png`);
+    }
+    await client.send('Page.removeScriptToEvaluateOnNewDocument',{identifier});
     // The atlas and study narrative remain readable without any scripts.
     await client.send('Emulation.setScriptExecutionDisabled',{value:true});
     await navigate('index.html',390,844,false);await imagesLoaded();await screenshot('home-no-js-mobile.png');
-    await navigate('tests/pumapunku/',390,844,false);await imagesLoaded();
-    assert.ok(await client.evaluate('document.querySelector("noscript").textContent.includes("Enable JavaScript")'));
+    for(const id of ['pumapunku','bent-corners']){
+      await navigate(`tests/${id}/`,390,844,false);await imagesLoaded();
+      assert.ok(await client.evaluate('document.querySelector("noscript").textContent.includes("Enable JavaScript")'));
+    }
     await client.send('Emulation.setScriptExecutionDisabled',{value:false});
     const exceptions=client.events.filter(e=>e.method==='Runtime.exceptionThrown');assert.deepEqual(exceptions,[],'Uncaught browser errors');
     const failures=client.events.filter(e=>e.method==='Network.responseReceived'&&e.params.response.url.startsWith(base.origin)&&e.params.response.status>=400);assert.deepEqual(failures,[],'Failed local resources');
